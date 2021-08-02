@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<form action=""" method="post">
+{% comment %} everything in your form must be in your HTML, but you can exclude stuff from the form.author
+and assign it in the view {% endcomment %}
+    <h1> What does your mama call you? {{form.author}} </h1>
+    {% csrf_token %}
+    <table class="table table-striped table-bordered border-primary">
+        <tr>
+            <th> Week </th>
+            <th> {{team}} </th>
+            <th> Opp </th>
+        </tr>
+        <tr>
+            <td> {{season.1}}</td>
+            <td> {{form.Hawk_Wk1}} </td>
+            <td> {{form.Opp_Wk1}}</td>
+        </tr>
+        <tr>
+            <td> {{season.2}}</td>
+            <td> {{form.Hawk_Wk2}} </td>
+            <td> {{form.Opp_Wk2}}</td>
+        </tr>
+        <tr>
+            <td> {{season.3}}</td>
+            <td> {{form.Hawk_Wk3}} </td>
+            <td> {{form.Opp_Wk3}}</td>
+        </tr>
+        <tr>
+            <td> {{season.4}}</td>
+            <td> {{form.Hawk_Wk4}} </td>
+            <td> {{form.Opp_Wk4}}</td>
+        </tr>
+        <tr>
+            <td> {{season.5}}</td>
+            <td> {{form.Hawk_Wk5}} </td>
+            <td> {{form.Opp_Wk5}}</td>
+        </tr>
+        <tr>
+            <td> {{season.6}}</td>
+            <td> {{form.Hawk_Wk6}} </td>
+            <td> {{form.Opp_Wk6}}</td>
+        </tr>
+        <tr>
+            <td> {{season.7}}</td>
+            <td> {{form.Hawk_Wk7}} </td>
+            <td> {{form.Opp_Wk7}}</td>
+        </tr>
+        <tr>
+            <td> {{season.8}}</td>
+            <td> {{form.Hawk_Wk8}} </td>
+            <td> {{form.Opp_Wk8}}</td>
+        </tr>
+        <tr>
+            <td> {{season.9}}</td>
+            <td> {{form.Hawk_Wk9}} </td>
+            <td> {{form.Opp_Wk9}}</td>
+        </tr>
+        <tr>
+            <td> {{season.10}}</td>
+            <td> {{form.Hawk_Wk10}} </td>
+            <td> {{form.Opp_Wk10}}</td>
+        </tr>
+        <tr>
+            <td> {{season.11}}</td>
+            <td> {{form.Hawk_Wk11}} </td>
+            <td> {{form.Opp_Wk11}}</td>
+        </tr>
+        <tr>
+            <td> {{season.12}}</td>
+            <td> {{form.Hawk_Wk12}} </td>
+            <td> {{form.Opp_Wk12}}</td>
+        </tr>
+        <tr>
+            <td> {{season.13}}</td>
+            <td> {{form.Hawk_Wk13}} </td>
+            <td> {{form.Opp_Wk13}}</td>
+        </tr>
+        <tr>
+            <td> {{season.14}}</td>
+            <td> {{form.Hawk_Wk14}} </td>
+            <td> {{form.Opp_Wk14}}</td>
+        </tr>
+        <tr>
+            <td> {{season.15}}</td>
+            <td> {{form.Hawk_Wk15}} </td>
+            <td> {{form.Opp_Wk15}}</td>
+        </tr>
+        <tr>
+            <td> {{season.16}}</td>
+            <td> {{form.Hawk_Wk16}} </td>
+            <td> {{form.Opp_Wk16}}</td>
+        </tr>
+        <tr>
+            <td> {{season.17}}</td>
+            <td> {{form.Hawk_Wk17}} </td>
+            <td> {{form.Opp_Wk17}}</td>
+        </tr>
+        <tr>
+            <td> {{season.18}}</td>
+            <td> {{form.Hawk_Wk18}} </td>
+            <td> {{form.Opp_Wk18}}</td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
+</div>
+{% endblock %}
+

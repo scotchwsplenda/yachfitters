@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% comment %} https://www.youtube.com/watch?v=vmP1r6xiJog {% endcomment %}
+{% comment %} the action in form can redirect and pass parameter to the next view {% endcomment %}
+    <form action="" method="post" >
+        {% csrf_token %}
+        
+        <h2>Go ahead and pick yourself a team buddy!</h2>
+        <select  name = "butts">
+            {% for entry in form %}
+                <option value="{{entry.team_acronym}}">{{ entry.team_name}}</option>
+            {% endfor %}  
+        </select>
+        <input type="submit">
+    </form>
+{% endblock %}
+
+
