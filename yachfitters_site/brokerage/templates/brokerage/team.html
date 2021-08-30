@@ -5,7 +5,7 @@
     <form action="" method="post" >
         {% csrf_token %}
         
-        <h2>Go ahead and pick yourself a team buddy!</h2>
+        <h2>Go ahead and pick yourself a team to {{phrase}} buddy!</h2>
         <select  name = "butts">
             {% for entry in form %}
                 <option value="{{entry.team_acronym}}">{{ entry.team_name}}</option>
@@ -13,6 +13,7 @@
         </select>
         <input type="submit">
     </form>
+    <p> </p>
 {% endblock %}
 
 

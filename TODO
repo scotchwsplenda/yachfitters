@@ -1,0 +1,17 @@
+
+
+add lockdown https://pypi.org/project/django-lockdown/ https://github.com/Dunedan/django-lockdown
+
+'the internet is a bad place full of haters and losers so this site grants access to only the sickest of bros and lady bros'
+
+fix dallas and pitt schedule (right of regular season)
+make results tables spread / overunder and score
+
+launch to azure https://www.youtube.com/watch?v=D6Wyk9q2JM0&list=PLlrxD0HtieHjHCQ0JB_RrhbQp_9ccJztr&index=23 
+https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/tutorial-django-app-service-postgres?tabs=clone
+
+make table collapseable
+
+find median / mode predicted record
+
+make the options on the navbar be a dropdown

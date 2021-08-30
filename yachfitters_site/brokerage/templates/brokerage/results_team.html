@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1>
+    Predicted Record and Differential ordered by Most Sanguine to Biggest Hater
+    </h1>
+    {{result | safe}}
+ 
+    <h1>
+    Predicted Record and Differential Averages*
+    </h1>
+    <h4>
+    *Ties are included in this calculation as losses because even in these trying times (and now more than ever) America
+    </h4>
+    {{average_record | safe}} 
+
+    <h1>
+    Straight Proggs
+    </h1>
+    {{proggs | safe}}
+
+    <h1>
+    Predicted Spreads
+    </h1>
+    {{spreads | safe}}
+
+
+    <h1>
+    Predicted Overunders
+    </h1>
+    {{overunders | safe}}
+</div>
+
+
+{%endblock%}

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
+
 from django.conf import settings
 
 # from django.db.models.fields import related
@@ -19,7 +19,8 @@ class nfl_teams(models.Model):
 
 class predicted_score(models.Model):
     team = models.ForeignKey(nfl_teams, on_delete=models.CASCADE)
-    author= models.CharField(max_length=420, null=True)
+    author= models.CharField(max_length=420, null=True, unique=True)
+    email = models.EmailField(null=True, blank=True)
     Hawk_Wk1= models.PositiveIntegerField(default=0, null=True)
     Opp_Wk1= models.PositiveIntegerField(default=0, null=True)
     Hawk_Wk2= models.PositiveIntegerField(default=0, null=True)

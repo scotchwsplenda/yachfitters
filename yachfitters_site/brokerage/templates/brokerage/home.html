@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        {% csrf_token %}
+    <h1>  What is this? What does it mean? How does it work? Why am I here?</h1>
+        <h2>
+    <ul>
+    <li>This website is an opportunity for you to prognosticate on the upcoming NFL season with regard to the scores of upcoming games. This exercise is called "Submit". </li>
+    <li>You can compare what you prognosticated with what other dudes prognosticated. This exercise is called "Compare". </li>
+    <li>When the time space continuum carries us from the realm of prognostication into the realm of reflection you can compare the prognostications of yourself and others with cold, hard, refreshing reality (insofar as reality is reflected in the scores of football games). This exercise is called "Accuracy". </li>
+    <li>You will be graded on your accuracy using a technically sophisticated algorythm made specifically out of math.</li>
+    <li>You may be curious to know that the math algorythm works thusly: </li>
+     <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+            <li>How closely you progged the point differential</li>
+            <li>How closely you progged total points scored</li>
+            <li>Below is the grading rubric. The final grade is an equal blend of your performance on points a. and b., ie (a+b)/2</li>
+    </ol>
+
+    </ul>
+        </h2>
+        <table class="table table-striped table-bordered border-primary">
+        
+            <tr>
+                <th> Spread </th>
+                <th> Grade </th>
+            </tr>
+            <tr>
+                <td> 0</td>
+                <td> 100 </td>
+            </tr>
+            <tr>
+                <td>&lt; 3.5 </td>
+                <td> 95 </td>
+            </tr>
+            <tr>
+                <td>&lt; 7.5 </td>
+                <td> 90 </td>
+            </tr>
+            <tr>
+                <td>&lt; 10.5 </td>
+                <td> 85 </td>
+            </tr>
+            <tr>
+                <td>&lt; 14.5 </td>
+                <td> 80 </td>
+            </tr>
+            <tr>
+                <td>&lt; 21.5 </td>
+                <td> 75 </td>
+            </tr>
+        </table>
+    <li>Please note this website uses the term 'dude' strictly in the non-gendered sense.</li>
+{% endblock %}
