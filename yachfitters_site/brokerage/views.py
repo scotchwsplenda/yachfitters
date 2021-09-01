@@ -6,6 +6,7 @@ from .forms import prediction_form
 from datetime import datetime
 import numpy as np
 
+
 def choose_team_view(request):
     team_view_form = nfl_teams.objects.all()
     team_acr = str(request.POST.get('butts'))
@@ -78,8 +79,14 @@ def results_view(request, acr):
     new_col = ['Pigskins' if word == 'Team' else 'Bye' if word == 'Week' else word for word in cols]
     weeks = ['W'+str(x+1)+' ' for x in range(18)]
     res = [i + j for i, j in zip(weeks, new_col)]
+
     hawkscore_df.columns = res
+    bye = [x for x in hawkscore_df.columns if x[-3:]=='Bye']
+    hawkscore_df.drop(columns=bye, inplace=True)
+
     oppscore_df.columns = res
+    bye = [x for x in oppscore_df.columns if x[-3:]=='Bye']
+    oppscore_df.drop(columns=bye, inplace=True)
 
     proggs = hawkscore_df.astype(str).add(' - ').add(oppscore_df.astype(str))
     proggs.reset_index(level=0, inplace=True)
@@ -94,7 +101,7 @@ def results_view(request, acr):
     result = pd.DataFrame(predicted_record)
 
     average_record = pd.DataFrame(columns=['Dude', 'Wins', 'Losses', 'Differential'])
-    average_record.loc[1] = ['Mean', round(result['Wins'].mean()),round(abs(17 - result['Wins'].mean())), round(result['Differential'].mean())]
+    average_record.loc[1] = ['Mean', round(result['Wins'].mean()), round(abs(17 - result['Wins'].mean())), round(result['Differential'].mean())]
     average_record.loc[2] = ['Mode', result['Wins'].mode()[0],result['Losses'].mode()[0], result['Differential'].mode()[0]]
     average_record.loc[3] = ['Median', round(result['Wins'].median()),round(abs(17 - result['Wins'].median())), round(result['Differential'].median())]
     ints = ['Wins', 'Losses', 'Differential']
@@ -112,8 +119,6 @@ def results_view(request, acr):
     overunders.reset_index(level=0, inplace=True)
     overunders = overunders.to_html(classes="table table-striped table-bordered table-hover", border=1,  index=False)
 
-    
-    
     return render(request, "brokerage/results_team.html", {'spreads' : spreads, 'overunders':overunders, 'proggs':proggs, 'result':result, 'average_record':average_record})
     
     # {'spreads_html' : spreads_html, 'record' : result.to_html(classes="table table-striped table-bordered table-hover", index=False, border=1),'average_record':average_record.to_html(classes="table table-striped table-bordered table-hover", index=False, border=1) })
