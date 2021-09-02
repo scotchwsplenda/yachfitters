@@ -1,3 +1,0 @@
-how to pass variable into static <img> tag in template?
-who figured out putting pictures on computers?
-# dif between return and redirect and sessions?
