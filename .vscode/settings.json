@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/7a051b49-e23d-422f-84e7-88be506318b6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/discomacrame",
-    "appService.deploySubpath": "."
-}
