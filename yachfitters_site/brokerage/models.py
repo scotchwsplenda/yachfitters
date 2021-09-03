@@ -18,6 +18,7 @@ class nfl_teams(models.Model):
         return self.team_name
 
 class predicted_score(models.Model):
+    id = models.AutoField(primary_key=True)
     team = models.ForeignKey(nfl_teams, on_delete=models.CASCADE)
     author= models.CharField(max_length=420, null=True, unique=True)
     email = models.EmailField(null=True, blank=True)

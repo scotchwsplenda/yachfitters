@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'qx3@_5pfzles86w2*4r(01*0kv@m@sb441)!7sx!idr*w1$mi5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['discomacrame.azurewebsites.net']
+ALLOWED_HOSTS = ['discomacrame.azurewebsites.net', 'localhost']
 
 
 # Application definition
@@ -124,8 +124,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 LOCKDOWN_PASSWORDS = ('$bXLVIII43-8', 'G0Hawks')
